@@ -19,8 +19,8 @@ jobs:
 
       - uses: gradle/gradle-build-action@v2
 
-      - name: Test
-        run: ./gradlew build
+      - name: Build
+        run: ./gradlew :maestro-cli:installDist -q
         
       - name: 'Upload Artifact'
         uses: actions/upload-artifact@v3
